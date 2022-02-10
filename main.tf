@@ -8,7 +8,16 @@ terraform {
   }
 
   required_version = ">= 1.1.0"
+
+  cloud {
+    organization = "MyLearnins"
+    workspaces {
+      name= "MyTerraformLearnings"
+    }
+  }
+
 }
+
 
 provider "azurerm" {
   features {}
